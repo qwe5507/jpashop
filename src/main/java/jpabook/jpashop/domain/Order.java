@@ -9,8 +9,20 @@ public class Order {
     @Id @GeneratedValue
     @Column(name = "ORDER_ID")
     private Long id;
+    @Column(name = "MEMBER_ID")
     private Long memberId;
-    private LocalDateTime date;
+
+//    private Member member;
+
+//    public Member getMember() {
+//        return member;
+//    }
+//
+//    public void setMember(Member member) {
+//        this.member = member;
+//    }
+
+    private LocalDateTime orderDate; // ORDER_DATE, order_date
 
     @Enumerated(EnumType.STRING)
     private OrderStatus status;
@@ -31,12 +43,12 @@ public class Order {
         this.memberId = memberId;
     }
 
-    public LocalDateTime getDate() {
-        return date;
+    public LocalDateTime getOrderDate() {
+        return orderDate;
     }
 
-    public void setDate(LocalDateTime date) {
-        this.date = date;
+    public void setOrderDate(LocalDateTime orderDate) {
+        this.orderDate = orderDate;
     }
 
     public OrderStatus getStatus() {
