@@ -12,7 +12,7 @@ public class Delivery extends BaseEntity{
     private String zipcode;//배송지 주소
     private DeliveryStatus status;
 
-    @OneToOne(mappedBy = "delivery")
+    @OneToOne(mappedBy = "delivery",fetch = FetchType.LAZY)
     private Order order;
 
 }
